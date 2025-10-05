@@ -10,6 +10,9 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+// Routes
+app.use('/api/appointments', require('./routes/appointments'));
+
 // Example route
 app.get("/", (req, res) => {
   res.send("Backend is running!");
